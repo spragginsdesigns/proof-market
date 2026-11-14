@@ -1,0 +1,34 @@
+{
+  "name": "proof-market",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "A market where bonded agents reproduce a repo's README steps in a locked sandbox; a random verifier audits; liars lose their bond. Built on NEAR.",
+  "scripts": {
+    "claims": "node scripts/claims.mjs",
+    "test": "node --test sandbox/egress/allowlist.test.mjs agents/*.test.mjs",
+    "test:sandbox": "PM_SANDBOX_IT=1 node --test sandbox/escape.test.mjs sandbox/fixtures.test.mjs",
+    "test:egress": "HOST_IPS=127.0.0.1 node --test sandbox/egress/allowlist.test.mjs",
+    "test:contract": "cd contract && cargo test",
+    "build:contract": "cd contract && cargo near build non-reproducible-wasm",
+    "sim": "node scripts/sim.mjs",
+    "demo": "node scripts/demo.mjs",
+    "dev": "vite --config web/vite.config.js",
+    "build": "vite build --config web/vite.config.js",
+    "preview": "vite preview --config web/vite.config.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.6",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@noble/hashes": "^2.4.0",
+    "near-api-js": "^7.5.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "puppeteer": "^25.17.0",
+    "vite": "^8.3.8"
+  }
+}

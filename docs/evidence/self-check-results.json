@@ -1,0 +1,133 @@
+{
+  "contract": "pmarket.testnet",
+  "repo": "https://github.com/spragginsdesigns/proof-market",
+  "started_at": "2026-11-13T12:31:01.029Z",
+  "jobs": [
+    {
+      "key": "self",
+      "id": 4,
+      "title": "Reproduce this repo's own README (no key)",
+      "path": "",
+      "commit": "dbcbf1306a3e0fe84bc3fad6df5c2165cc711839",
+      "expect": "PASS",
+      "outcome": "PASS",
+      "final_verdicts": [
+        "Pass",
+        "Pass",
+        "Pass"
+      ],
+      "slashed": [],
+      "paid": [
+        "w1.pmarket.testnet",
+        "w2.pmarket.testnet"
+      ],
+      "burns": [],
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "challenge_award"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "45000000000000000000000",
+          "kind": "bounty"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "45000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "match": true
+    }
+  ],
+  "txs": [
+    {
+      "kind": "post",
+      "tx": "43in9PQhcti1zhTym7QVqwg6yuMyNyiysYTnviev4Qnr",
+      "job": 4
+    },
+    {
+      "kind": "claim",
+      "actor": "w2.pmarket.testnet",
+      "tx": "9izaUhM58WUDfUrUSKvntaGmUJz5rdt4LkaU7XS2bysf"
+    },
+    {
+      "kind": "claim",
+      "actor": "w1.pmarket.testnet",
+      "tx": "AAThV7T7hNos28skRG5hFS8fNQhnKR8jjSjp59N1CLYj"
+    },
+    {
+      "kind": "commit",
+      "actor": "w1.pmarket.testnet",
+      "tx": "1MvKGcM7uUvrxgdLAdYQUCRM2oTygUvNdT7pk8W3mLx"
+    },
+    {
+      "kind": "commit",
+      "actor": "w2.pmarket.testnet",
+      "tx": "C4psLPxFrxKuHyLpezKPRQ9dHGUY8Lc1YYdVvkKWidbk"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w1.pmarket.testnet",
+      "tx": "9SYJVs9gcKgfceDcVxeB5vkQYBAmVv5QSUusMcCBGnJb"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w2.pmarket.testnet",
+      "tx": "rRENcnoZxiDzC9ycLFpLNDXhAhJaxcGsjbXZ6GgFiro"
+    },
+    {
+      "kind": "challenge",
+      "actor": "poster.pmarket.testnet",
+      "tx": "9Mfyjz8d5fJah94Vur2vn9gqtiZ1kzQLiG3AUeqF7Zpr"
+    },
+    {
+      "kind": "verify",
+      "actor": "v3.pmarket.testnet",
+      "tx": "EcyaYjCkbk1rtvdK6MiXVbgtNDzRb1E4BBM35eETNi25"
+    },
+    {
+      "kind": "finalize",
+      "tx": "9uzLUUR2oqySUDBS2ztpVgWhMqmoTpD8QPoYkuiCgZit"
+    }
+  ],
+  "finished_at": "2026-11-13T12:33:03.162Z",
+  "model_usage": {
+    "calls": 6,
+    "input_tokens": 6287,
+    "output_tokens": 1626,
+    "usd": 0.00233,
+    "byModel": {
+      "gpt-5-nano": {
+        "calls": 4,
+        "input_tokens": 4080,
+        "output_tokens": 1046,
+        "usd": 0.00062
+      },
+      "gpt-5-mini": {
+        "calls": 2,
+        "input_tokens": 2207,
+        "output_tokens": 580,
+        "usd": 0.00171
+      }
+    }
+  },
+  "burned_total": "20000000000000000000000"
+}

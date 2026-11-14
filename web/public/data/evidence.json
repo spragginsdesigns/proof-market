@@ -1,0 +1,498 @@
+{
+ "0": {
+  "w1.pmarket.testnet": {
+   "hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+   "steps": [
+    [
+     {
+      "cmd": "node add.mjs 2 3",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5"
+     }
+    ],
+    [
+     {
+      "cmd": "node add.mjs 10 32",
+      "exit": 0,
+      "timed_out": false,
+      "out": "42"
+     }
+    ]
+   ]
+  },
+  "w2.pmarket.testnet": {
+   "hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+   "steps": [
+    [
+     {
+      "cmd": "node add.mjs 2 3",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5"
+     }
+    ],
+    [
+     {
+      "cmd": "node add.mjs 10 32",
+      "exit": 0,
+      "timed_out": false,
+      "out": "42"
+     }
+    ]
+   ]
+  }
+ },
+ "1": {
+  "w1.pmarket.testnet": {
+   "hash": "27d07364fef290910898645e343f048a674eff7baa100c42e9ad8ae2cf10f7b7",
+   "steps": [
+    [
+     {
+      "cmd": "node add.mjs 2 3",
+      "exit": 0,
+      "timed_out": false,
+      "out": "6"
+     }
+    ],
+    [
+     {
+      "cmd": "node add.mjs 10 32",
+      "exit": 0,
+      "timed_out": false,
+      "out": "43"
+     }
+    ]
+   ]
+  },
+  "w2.pmarket.testnet": {
+   "hash": "27d07364fef290910898645e343f048a674eff7baa100c42e9ad8ae2cf10f7b7",
+   "steps": [
+    [
+     {
+      "cmd": "node add.mjs 2 3",
+      "exit": 0,
+      "timed_out": false,
+      "out": "6"
+     }
+    ],
+    [
+     {
+      "cmd": "node add.mjs 10 32",
+      "exit": 0,
+      "timed_out": false,
+      "out": "43"
+     }
+    ]
+   ]
+  }
+ },
+ "2": {
+  "v1.pmarket.testnet": {
+   "hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+   "steps": [
+    [
+     {
+      "cmd": "node add.mjs 2 3",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5"
+     }
+    ],
+    [
+     {
+      "cmd": "node add.mjs 10 32",
+      "exit": 0,
+      "timed_out": false,
+      "out": "42"
+     }
+    ]
+   ]
+  },
+  "w1.pmarket.testnet": {
+   "hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+   "steps": [
+    [
+     {
+      "cmd": "node add.mjs 2 3",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5"
+     }
+    ],
+    [
+     {
+      "cmd": "node add.mjs 10 32",
+      "exit": 0,
+      "timed_out": false,
+      "out": "42"
+     }
+    ]
+   ]
+  },
+  "w3.pmarket.testnet": {
+   "hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+   "steps": [
+    [
+     {
+      "cmd": "node add.mjs 2 3",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5"
+     }
+    ],
+    [
+     {
+      "cmd": "node add.mjs 10 32",
+      "exit": 0,
+      "timed_out": false,
+      "out": "42"
+     }
+    ]
+   ]
+  },
+  "_scripted": [
+   "w3 ran the steps, then signed the opposite of what it found."
+  ]
+ },
+ "4": {
+  "v3.pmarket.testnet": {
+   "hash": "21f01e189ea6a3592420e7bff80ba00381c629d0f060b15b8c04e8ae556be9e9",
+   "steps": [
+    [
+     {
+      "cmd": "npm install",
+      "exit": 0,
+      "timed_out": false,
+      "out": "  run `npm fund` for details\n\nfound 0 vulnerabilities\nnpm notice\nnpm notice New major version of npm available! 10.9.9 -> 12.2.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice"
+     }
+    ],
+    [
+     {
+      "cmd": "npm install",
+      "exit": 0,
+      "timed_out": false,
+      "out": "\nup to date, audited 122 packages in 707ms\n\n41 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities"
+     },
+     {
+      "cmd": "node scripts/sim.mjs",
+      "exit": 0,
+      "timed_out": false,
+      "out": "Proof Market simulation: 2000 jobs, lie probability 0.5\n\n  honest worker net:   1899.80 NEAR  (paid for correct reports, bonds always returned)\n  dishonest worker net:-200.40 NEAR  (1002 lies, 1002 caught and slashed)\n  bonds burned:        200.40 NEAR  (slashed funds, nobody can withdraw them)\n\n  assumes: an honest verifier, every disagreement audited, a liar flips every step; two workers who agree on a lie are not modeled.\n  result: under these assumptions every lie is caught and costs its bond, and honest reports earn the bounty."
+     }
+    ],
+    [
+     {
+      "cmd": "npm install",
+      "exit": 0,
+      "timed_out": false,
+      "out": "\nup to date, audited 122 packages in 742ms\n\n41 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities"
+     },
+     {
+      "cmd": "npm test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 12\n# suites 0\n# pass 12\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 565.71945"
+     }
+    ]
+   ]
+  },
+  "w1.pmarket.testnet": {
+   "hash": "3be520ad6f585d16b7a309686a81c2d951f98d11fbf18874fbdb194d549a930d",
+   "steps": [
+    [
+     {
+      "cmd": "npm install",
+      "exit": 0,
+      "timed_out": false,
+      "out": "  run `npm fund` for details\n\nfound 0 vulnerabilities\nnpm notice\nnpm notice New major version of npm available! 10.9.9 -> 12.2.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice"
+     }
+    ],
+    [
+     {
+      "cmd": "node scripts/sim.mjs",
+      "exit": 0,
+      "timed_out": false,
+      "out": "Proof Market simulation: 2000 jobs, lie probability 0.5\n\n  honest worker net:   1898.30 NEAR  (paid for correct reports, bonds always returned)\n  dishonest worker net:-203.40 NEAR  (1017 lies, 1017 caught and slashed)\n  bonds burned:        203.40 NEAR  (slashed funds, nobody can withdraw them)\n\n  assumes: an honest verifier, every disagreement audited, a liar flips every step; two workers who agree on a lie are not modeled.\n  result: under these assumptions every lie is caught and costs its bond, and honest reports earn the bounty."
+     }
+    ],
+    [
+     {
+      "cmd": "npm test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 12\n# suites 0\n# pass 12\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 566.929971"
+     }
+    ]
+   ]
+  },
+  "w2.pmarket.testnet": {
+   "hash": "c843c78d669331ca5baf0b8e07f155e86b6e5ad9507c7660023d224303328d75",
+   "steps": [
+    [
+     {
+      "cmd": "npm install",
+      "exit": 0,
+      "timed_out": false,
+      "out": "  run `npm fund` for details\n\nfound 0 vulnerabilities\nnpm notice\nnpm notice New major version of npm available! 10.9.9 -> 12.2.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice"
+     }
+    ],
+    [
+     {
+      "cmd": "node scripts/sim.mjs",
+      "exit": 0,
+      "timed_out": false,
+      "out": "Proof Market simulation: 2000 jobs, lie probability 0.5\n\n  honest worker net:   1903.10 NEAR  (paid for correct reports, bonds always returned)\n  dishonest worker net:-193.80 NEAR  (969 lies, 969 caught and slashed)\n  bonds burned:        193.80 NEAR  (slashed funds, nobody can withdraw them)\n\n  assumes: an honest verifier, every disagreement audited, a liar flips every step; two workers who agree on a lie are not modeled.\n  result: under these assumptions every lie is caught and costs its bond, and honest reports earn the bounty."
+     }
+    ],
+    [
+     {
+      "cmd": "npm test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 12\n# suites 0\n# pass 12\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 566.607202"
+     }
+    ]
+   ]
+  }
+ },
+ "5": {
+  "v3.pmarket.testnet": {
+   "hash": "1e8a2f8286e8947d6d3cf935f01c14962711a14bf5b39fa7dc04435683d304a7",
+   "steps": [
+    [
+     {
+      "cmd": "node cli.mjs 1h30m",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5400"
+     }
+    ],
+    [
+     {
+      "cmd": "node cli.mjs 2d",
+      "exit": 1,
+      "timed_out": false,
+      "out": "tinydur: unknown unit \"d\""
+     }
+    ],
+    [
+     {
+      "cmd": "node --test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 146.113866"
+     }
+    ]
+   ]
+  },
+  "w1.pmarket.testnet": {
+   "hash": "e23a973a309e6d2d55964ae9c9d25dc7eca1a30c82a589fb427db1b983c73ed2",
+   "steps": [
+    [
+     {
+      "cmd": "node cli.mjs 1h30m",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5400"
+     }
+    ],
+    [
+     {
+      "cmd": "node cli.mjs 2d",
+      "exit": 1,
+      "timed_out": false,
+      "out": "tinydur: unknown unit \"d\""
+     }
+    ],
+    [
+     {
+      "cmd": "node --test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 145.4519"
+     }
+    ]
+   ]
+  },
+  "w3.pmarket.testnet": {
+   "hash": "a3f9d1cb26223b60da1cd48df646c9bebf2c58db7e232cf1d6ef624ebf07f597",
+   "steps": [
+    [
+     {
+      "cmd": "node cli.mjs 1h30m",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5400"
+     }
+    ],
+    [
+     {
+      "cmd": "node cli.mjs 2d",
+      "exit": 1,
+      "timed_out": false,
+      "out": "tinydur: unknown unit \"d\""
+     }
+    ],
+    [
+     {
+      "cmd": "node --test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 135.442161"
+     }
+    ]
+   ]
+  },
+  "_scripted": [
+   "w3 ran the steps, then signed Pass on every step."
+  ]
+ },
+ "6": {
+  "v1.pmarket.testnet": {
+   "hash": "b9d22c129d0ce1ed7e5c290c00d9e7066d69783b57369b40c3616655229caefe",
+   "steps": [
+    [
+     {
+      "cmd": "node cli.mjs 1h30m",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5400"
+     }
+    ],
+    [
+     {
+      "cmd": "node cli.mjs 2d",
+      "exit": 1,
+      "timed_out": false,
+      "out": "tinydur: unknown unit \"d\""
+     }
+    ],
+    [
+     {
+      "cmd": "node --test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 133.187039"
+     }
+    ]
+   ]
+  },
+  "v3.pmarket.testnet": {
+   "hash": "8c2a5aaa48f6e9504e64f9ecf82e58b72943aaa73f5c0974849f4ab70a6e00b4",
+   "steps": [
+    [
+     {
+      "cmd": "bash -c npm ci --no-audit --no-fund",
+      "exit": 1,
+      "timed_out": false,
+      "out": "npm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-14T10_14_43_120Z-debug-0.log"
+     },
+     {
+      "cmd": "node cli.mjs 1h30m",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5400"
+     }
+    ],
+    [
+     {
+      "cmd": "node cli.mjs 2d",
+      "exit": 1,
+      "timed_out": false,
+      "out": "tinydur: unknown unit \"d\""
+     }
+    ],
+    [
+     {
+      "cmd": "node --test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 121.826657"
+     }
+    ]
+   ]
+  },
+  "w2.pmarket.testnet": {
+   "hash": "8404ca91836a0a31f0ba339be874e38ea4ee2fe36144aa42450428457095c1f6",
+   "steps": [
+    [
+     {
+      "cmd": "node cli.mjs 1h30m",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5400"
+     }
+    ],
+    [
+     {
+      "cmd": "node cli.mjs 2d",
+      "exit": 1,
+      "timed_out": false,
+      "out": "tinydur: unknown unit \"d\""
+     }
+    ],
+    [
+     {
+      "cmd": "node --test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 133.168333"
+     }
+    ]
+   ]
+  },
+  "w3.pmarket.testnet": {
+   "hash": "b7f983e43e3a17136cc819c6be740bf51a15efe5de3f97169b10d5e3e281ba91",
+   "steps": [
+    [
+     {
+      "cmd": "npm ci",
+      "exit": 1,
+      "timed_out": false,
+      "out": "npm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-14T10_14_18_772Z-debug-0.log"
+     },
+     {
+      "cmd": "node cli.mjs 1h30m",
+      "exit": 0,
+      "timed_out": false,
+      "out": "5400"
+     }
+    ],
+    [
+     {
+      "cmd": "npm ci",
+      "exit": 1,
+      "timed_out": false,
+      "out": "npm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-14T10_14_20_173Z-debug-0.log"
+     },
+     {
+      "cmd": "node cli.mjs 2d",
+      "exit": 1,
+      "timed_out": false,
+      "out": "tinydur: unknown unit \"d\""
+     }
+    ],
+    [
+     {
+      "cmd": "npm ci",
+      "exit": 1,
+      "timed_out": false,
+      "out": "npm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-14T10_14_21_047Z-debug-0.log"
+     },
+     {
+      "cmd": "node --test",
+      "exit": 0,
+      "timed_out": false,
+      "out": "# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 119.461894"
+     }
+    ]
+   ]
+  },
+  "_scripted": [
+   "w3 ran the steps, then signed Pass on every step.",
+   "v3, the verifier drawn for round 1, reran the steps, then ruled Pass on every step.",
+   "The run script filed w2's appeal as soon as that ruling landed."
+  ]
+ }
+}

@@ -1,0 +1,64 @@
+{
+  "contract": "pmarket.testnet",
+  "jobId": 3,
+  "results": [
+    {
+      "name": "claim a nonexistent job",
+      "pass": true,
+      "tx": "GuMqEQRvDs7sZvQn9jYRLsafVnvpkkESuoXUQhZ41kWt",
+      "detail": "no such job"
+    },
+    {
+      "name": "poster claims its own job",
+      "pass": true,
+      "tx": "2UDu5aSHUY2e34j159F79s8YXbJ6QJqMKvHPiWnQQE7j",
+      "detail": "poster cannot claim its own job"
+    },
+    {
+      "name": "verify by a verifier that was not drawn",
+      "pass": true,
+      "tx": "GVUhCNcpyeuHRfoMGSe2D1HgfRLDSV5dZfnyR6ocYGZ9",
+      "detail": "no open audit on this job"
+    },
+    {
+      "name": "reveal without a commit",
+      "pass": true,
+      "tx": "Aj6HJXssPzaHvWh6Jb1aWTv5o6FdSdXqDmcoRq3H2weD",
+      "detail": "not a claimant of this job"
+    },
+    {
+      "name": "challenge by a stranger",
+      "pass": true,
+      "tx": "GGhnvFcJCwuAtG49NBeUKsmXSWXrjBGjE5asugD55XC4",
+      "detail": "job not reported yet"
+    },
+    {
+      "name": "finalize before the job is reported",
+      "pass": true,
+      "tx": "BffJZQmkBqgYHFr3sdCwLtR7Qn5jmRBq2NZWu7pFqERH",
+      "detail": "job not reported yet"
+    },
+    {
+      "name": "claim after the claim window closed",
+      "pass": true,
+      "tx": "8PbPhE3xaUttWdxMzLmt9chjMJFepwFx3YkfFw97YC1f",
+      "detail": "claim phase closed"
+    },
+    {
+      "name": "withdraw more than free",
+      "pass": true,
+      "tx": "CMsSHf58ttSuiGdRR3pgLS95NwdHDvMQMTZR8iQRsi7h",
+      "detail": "withdraw: only free balance can be withdrawn (free 529120000000000000000000, requested 1000000000000000000000000000)"
+    },
+    {
+      "name": "fc key calls another contract (test.near)",
+      "pass": true,
+      "detail": "Exceeded 3 providers to execute request"
+    },
+    {
+      "name": "fc key attaches a deposit to the market",
+      "pass": true,
+      "detail": "Exceeded 3 providers to execute request"
+    }
+  ]
+}

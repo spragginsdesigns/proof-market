@@ -1,0 +1,281 @@
+{
+  "contract": "pmarket.testnet",
+  "repo": "https://github.com/spragginsdesigns/proof-market",
+  "started_at": "2026-11-13T00:27:27.720Z",
+  "jobs": [
+    {
+      "key": "honest",
+      "id": 0,
+      "title": "Reproduce the adder README (honest)",
+      "path": "fixtures/honest",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "expect": "PASS",
+      "outcome": "PASS",
+      "final_verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "slashed": [],
+      "paid": [
+        "w1.pmarket.testnet",
+        "w2.pmarket.testnet"
+      ],
+      "burns": [],
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "match": true
+    },
+    {
+      "key": "broken",
+      "id": 1,
+      "title": "Reproduce the adder README (a broken step)",
+      "path": "fixtures/broken",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "expect": "FAIL",
+      "outcome": "FAIL",
+      "final_verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "slashed": [],
+      "paid": [
+        "w1.pmarket.testnet",
+        "w2.pmarket.testnet"
+      ],
+      "burns": [],
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "match": true
+    },
+    {
+      "key": "slashed",
+      "id": 2,
+      "title": "Reproduce the adder README (a worker lies)",
+      "path": "fixtures/honest",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "expect": "SLASHED",
+      "outcome": "SLASHED",
+      "final_verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "slashed": [
+        "w3.pmarket.testnet"
+      ],
+      "paid": [
+        "w1.pmarket.testnet"
+      ],
+      "burns": [
+        {
+          "account": "w3.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "slash"
+        }
+      ],
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v1.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "90000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "match": true
+    }
+  ],
+  "txs": [
+    {
+      "kind": "post",
+      "tx": "FRK7WuRsxFivZWUMXdwTufK32z37d2oaqqVRpxUdF86R",
+      "job": 0
+    },
+    {
+      "kind": "claim",
+      "actor": "w2.pmarket.testnet",
+      "tx": "5yW6oRoABMT8b2q3LoHS5XpFWohjGzbaRfYYR33N1rLa"
+    },
+    {
+      "kind": "claim",
+      "actor": "w1.pmarket.testnet",
+      "tx": "i3D4T7MrpKrDF2yqAUf2SPNzV2TQAcUCcusqAeNCnWb"
+    },
+    {
+      "kind": "commit",
+      "actor": "w1.pmarket.testnet",
+      "tx": "691wf4ZYf75CJhqejeZPnCG2e2QXjgqU5m5WwJ5x2mvS"
+    },
+    {
+      "kind": "commit",
+      "actor": "w2.pmarket.testnet",
+      "tx": "92HSHvujrzaCUYPRYficdLTTfjRN4a6pW8fSnjCXuSsK"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w1.pmarket.testnet",
+      "tx": "D5rHESxwDY5qfmf3usaixjcxQmyWrpNdbu1pXDhicQjM"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w2.pmarket.testnet",
+      "tx": "9iHbL5f9roJQQ6qAngUpV49Z2JNbGSUcn6tKTYLFvsnQ"
+    },
+    {
+      "kind": "finalize",
+      "tx": "AmNHfM55A1ZDpC2JyCLrGto9su6JuNSDRtjZA9KAdEmg"
+    },
+    {
+      "kind": "post",
+      "tx": "JCKDSZoUr5XrFY6WY5ojokbD5BBcs6ANKP5uaSiRPkvt",
+      "job": 1
+    },
+    {
+      "kind": "claim",
+      "actor": "w2.pmarket.testnet",
+      "tx": "BXgxQZwm5AJwdJjSCMbio4LhQeYycrizFT6kb45YyoSF"
+    },
+    {
+      "kind": "claim",
+      "actor": "w1.pmarket.testnet",
+      "tx": "BJN4RM6K7RAfYjy9YF1ngcvnx56ZgR7bxJ8r2DdSeoNR"
+    },
+    {
+      "kind": "commit",
+      "actor": "w1.pmarket.testnet",
+      "tx": "HsaEnwWBGnxZ85yN2ypy3JiWHB2gXbKi2rUUvhTkUq2L"
+    },
+    {
+      "kind": "commit",
+      "actor": "w2.pmarket.testnet",
+      "tx": "CJqzuVUaPVejwWdei4o6d5aEz7cj4E1685yH8Bkr3FNE"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w1.pmarket.testnet",
+      "tx": "FG9uTnTrixjZgQ94V93FP7a3vHUVCW6k9DTLKDCkPC9S"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w2.pmarket.testnet",
+      "tx": "2WQ4nUAtWezV4JikUECGgFC1FGtubg2B31UdYgWtrbuQ"
+    },
+    {
+      "kind": "finalize",
+      "tx": "2yibq2arjNGpRPwuQgn8rihdDY5KBzVbPAtgL3LRf49T"
+    },
+    {
+      "kind": "post",
+      "tx": "EvCmAKPAxTFNZpSG24D1MMDUMvYfbEmAoZMgLaoosUD7",
+      "job": 2
+    },
+    {
+      "kind": "claim",
+      "actor": "w3.pmarket.testnet",
+      "tx": "SaAYnwRTh68MxQ2fpot4kgSFXYn9fyQ91p8niYwhocK"
+    },
+    {
+      "kind": "claim",
+      "actor": "w1.pmarket.testnet",
+      "tx": "7ZhGHpu3bYJwnsWmkXuDvKLeGCYZtFLw97BuQBWV2XAs"
+    },
+    {
+      "kind": "commit",
+      "actor": "w1.pmarket.testnet",
+      "tx": "HufkvYi2ppYywJfZCVhQrnUQB81NMeyBS7UQQ3ysUT7w"
+    },
+    {
+      "kind": "commit",
+      "actor": "w3.pmarket.testnet",
+      "tx": "Bqax52GHRcmZVyRXQMK1s8AmSGZmFhVpmWJKrnbMdkAh"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w1.pmarket.testnet",
+      "tx": "AMdu9xZamGutASoNB5N8ZZ3d726vCxkmUuQmctvZFbei"
+    },
+    {
+      "kind": "reveal",
+      "actor": "w3.pmarket.testnet",
+      "tx": "3MHW1Cp4iSFu7MX53P1uAFjU5oS7bLu6Q8qvka5vRbti"
+    },
+    {
+      "kind": "verify",
+      "actor": "v1.pmarket.testnet",
+      "tx": "JQRSLPERWqHrahrVr3nA9BcnDRStvKbwR5Ys1aE9o8m"
+    },
+    {
+      "kind": "finalize",
+      "tx": "DLW5QEYPeRoWigfxaGwSbcRdUkC3dqVVcVwBSMvcKU6T"
+    }
+  ],
+  "finished_at": "2026-11-13T00:29:59.120Z",
+  "model_usage": {
+    "calls": 14,
+    "input_tokens": 5941,
+    "output_tokens": 3351,
+    "usd": 0.00224,
+    "byModel": {
+      "gpt-5-nano": {
+        "calls": 12,
+        "input_tokens": 5092,
+        "output_tokens": 3078,
+        "usd": 0.00149
+      },
+      "gpt-5-mini": {
+        "calls": 2,
+        "input_tokens": 849,
+        "output_tokens": 273,
+        "usd": 0.00076
+      }
+    }
+  },
+  "burned_total": "20000000000000000000000"
+}

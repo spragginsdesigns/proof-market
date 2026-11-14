@@ -1,0 +1,350 @@
+{
+  "contract": "pmarket.testnet",
+  "repo": "https://github.com/spragginsdesigns/proof-market",
+  "started_at": "2026-11-14T10:13:10.325Z",
+  "jobs": [
+    {
+      "key": "caught",
+      "id": 5,
+      "title": "Reproduce the tinydur README (a false approval)",
+      "path": "fixtures/misleading",
+      "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+      "expect": "SLASHED",
+      "outcome": "SLASHED",
+      "final_verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "slashed": [
+        "w3.pmarket.testnet"
+      ],
+      "paid": [
+        "w1.pmarket.testnet"
+      ],
+      "burns": [
+        {
+          "account": "w3.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "slash"
+        }
+      ],
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "90000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "match": true,
+      "reports": [
+        {
+          "worker": "w1.pmarket.testnet",
+          "verdicts": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "status": "paid"
+        },
+        {
+          "worker": "w3.pmarket.testnet",
+          "verdicts": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "status": "slashed"
+        }
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "reason": "disagreement",
+          "verifier": "v3.pmarket.testnet",
+          "ruling": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "challenger": null
+        }
+      ],
+      "scripted": [
+        {
+          "account": "w3.pmarket.testnet",
+          "script": "reports Pass on every step"
+        }
+      ],
+      "network_fee": {
+        "transactions": 9,
+        "yocto": "2346853475507200000000",
+        "near": 0.002346
+      }
+    },
+    {
+      "key": "appeal",
+      "id": 6,
+      "title": "Reproduce the tinydur README (the verifier sides with it)",
+      "path": "fixtures/misleading",
+      "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+      "expect": "SLASHED",
+      "outcome": "SLASHED",
+      "final_verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "slashed": [
+        "w3.pmarket.testnet"
+      ],
+      "paid": [
+        "w2.pmarket.testnet"
+      ],
+      "burns": [
+        {
+          "account": "w3.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "slash"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "overruled"
+        }
+      ],
+      "payouts": [
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v1.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "challenge_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "90000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "match": true,
+      "reports": [
+        {
+          "worker": "w2.pmarket.testnet",
+          "verdicts": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "status": "paid"
+        },
+        {
+          "worker": "w3.pmarket.testnet",
+          "verdicts": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "status": "slashed"
+        }
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "reason": "disagreement",
+          "verifier": "v3.pmarket.testnet",
+          "ruling": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "challenger": null
+        },
+        {
+          "round": 2,
+          "reason": "challenge",
+          "verifier": "v1.pmarket.testnet",
+          "ruling": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "challenger": "w2.pmarket.testnet"
+        }
+      ],
+      "scripted": [
+        {
+          "account": "w3.pmarket.testnet",
+          "script": "reports Pass on every step"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "script": "rules Pass on every step in round 1"
+        }
+      ],
+      "network_fee": {
+        "transactions": 11,
+        "yocto": "2971407572223200000000",
+        "near": 0.002971
+      }
+    }
+  ],
+  "txs": [
+    {
+      "kind": "post",
+      "tx": "9dHK2jSazag8UQAzuKimuvwPetDxDpFGJ4qkJpfincUT",
+      "job": 5
+    },
+    {
+      "kind": "claim",
+      "actor": "w1.pmarket.testnet",
+      "tx": "ArRq2GgdSA1noFi3WjYHomMu8DA8dJ8GSomUsfQ5GpWU",
+      "job": 5
+    },
+    {
+      "kind": "claim",
+      "actor": "w3.pmarket.testnet",
+      "tx": "2xXqkgLrDRonRDvR8tcC4SymMWA8vLHXfLT2XKoayNn5",
+      "job": 5
+    },
+    {
+      "kind": "commit",
+      "actor": "w3.pmarket.testnet",
+      "tx": "DNYQecKTCZ6Go2GxoJierTM4SVigQQXwF8f1yme6qJHU",
+      "job": 5
+    },
+    {
+      "kind": "commit",
+      "actor": "w1.pmarket.testnet",
+      "tx": "2RGac5WfgnjFMWDQ97ZEGWscXjzP8XkBnStBJG5Ahmzd",
+      "job": 5
+    },
+    {
+      "kind": "reveal",
+      "actor": "w1.pmarket.testnet",
+      "tx": "9bDEGaq9KwwrdEneoSJCSTiMaacapujQWsETWEb3FYXg",
+      "job": 5
+    },
+    {
+      "kind": "reveal",
+      "actor": "w3.pmarket.testnet",
+      "tx": "Fj3oCRvhrpTdCJykziB42n3eVECyagZFfrdEfpJyCvJ6",
+      "job": 5
+    },
+    {
+      "kind": "verify",
+      "actor": "v3.pmarket.testnet",
+      "tx": "5HBVsU1CdmcsXK6GHiaH4ptR7iYSNwz6FvUcvdnpvtrY",
+      "job": 5
+    },
+    {
+      "kind": "finalize",
+      "tx": "GQDKr6pH8iDGrKhYXo51t8aP9J9u1bhhr9oSgrX2zosJ",
+      "job": 5
+    },
+    {
+      "kind": "post",
+      "tx": "5JnD1anDtcsGa78um91T4DyrJTQT6EZb63y8aidU3atP",
+      "job": 6
+    },
+    {
+      "kind": "claim",
+      "actor": "w2.pmarket.testnet",
+      "tx": "AGyGgpzeJJpnfJgKwmWcZKe4zqCm7j6QDVkS3xkVHJjU",
+      "job": 6
+    },
+    {
+      "kind": "claim",
+      "actor": "w3.pmarket.testnet",
+      "tx": "F885G1YZ7hp6bAy5DcEaRJX2uB1Ru6b7qyNWKFhPbayS",
+      "job": 6
+    },
+    {
+      "kind": "commit",
+      "actor": "w2.pmarket.testnet",
+      "tx": "14Zfr3rSJoHsHRi7Qyz1dibz9HjxN3KLdxvURKn4pz8g",
+      "job": 6
+    },
+    {
+      "kind": "commit",
+      "actor": "w3.pmarket.testnet",
+      "tx": "83bS6WbWEbTqhnq9W3wkWQzsbWJJP1653NaQeQBLXHUv",
+      "job": 6
+    },
+    {
+      "kind": "reveal",
+      "actor": "w2.pmarket.testnet",
+      "tx": "Ewq8HXhb7h9huEWupMiYELrMLxrmjB4isEWa7iWfE3zp",
+      "job": 6
+    },
+    {
+      "kind": "reveal",
+      "actor": "w3.pmarket.testnet",
+      "tx": "4daq9q8v8qfh6N8RC5VAZj3TAi5oWv9qkpT4uUBCa8L4",
+      "job": 6
+    },
+    {
+      "kind": "verify",
+      "actor": "v3.pmarket.testnet",
+      "tx": "cRX6yzqUDdYvW5P3JPGDUqbmUFqGCvxnAQL4pRvCP4s",
+      "job": 6
+    },
+    {
+      "kind": "challenge",
+      "actor": "w2.pmarket.testnet",
+      "tx": "EvDR2zTiiQLEzT6CuhFTtusFUWSgSzsdUN8GLsfxyhQd",
+      "job": 6
+    },
+    {
+      "kind": "verify",
+      "actor": "v1.pmarket.testnet",
+      "tx": "J1mespXL1zX9xhHeJm17zjwYde9ssYssLVwdJuZeijpy",
+      "job": 6
+    },
+    {
+      "kind": "finalize",
+      "tx": "kxcXxtxFhM4vPbCBuGBVmve2YWeLFiDVUfDLpk72Qe3",
+      "job": 6
+    }
+  ],
+  "finished_at": "2026-11-14T10:15:16.510Z",
+  "model_usage": {
+    "calls": 14,
+    "input_tokens": 10200,
+    "output_tokens": 4467,
+    "usd": 0.00584,
+    "byModel": {
+      "gpt-5-nano": {
+        "calls": 8,
+        "input_tokens": 6109,
+        "output_tokens": 2766,
+        "usd": 0.00141
+      },
+      "gpt-5-mini": {
+        "calls": 6,
+        "input_tokens": 4091,
+        "output_tokens": 1701,
+        "usd": 0.00442
+      }
+    }
+  },
+  "burned_total": "110000000000000000000000"
+}

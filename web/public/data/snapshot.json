@@ -1,0 +1,934 @@
+{
+  "contract": "pmarket.testnet",
+  "captured_at": "2026-11-14T11:41:49.845Z",
+  "config": {
+    "min_worker_bond": "50000000000000000000000",
+    "verifier_bond": "50000000000000000000000",
+    "challenge_bond": "50000000000000000000000",
+    "audit_bps": 0,
+    "audit_fee_bps": 1000,
+    "max_steps": 12,
+    "max_slots": 5,
+    "min_phase_ms": 5000,
+    "max_phase_ms": 86400000
+  },
+  "burned": "110000000000000000000000",
+  "jobs": [
+    {
+      "id": 6,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the tinydur README (the verifier sides with it)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+      "path": "fixtures/misleading",
+      "status": "Finalized",
+      "phase": "Finalized",
+      "bounty": "100000000000000000000000",
+      "slots": 2,
+      "claims_count": 2,
+      "steps_count": 3,
+      "final_verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "slashed_count": 1,
+      "posted_at": 1794651249426
+    },
+    {
+      "id": 5,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the tinydur README (a false approval)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+      "path": "fixtures/misleading",
+      "status": "Finalized",
+      "phase": "Finalized",
+      "bounty": "100000000000000000000000",
+      "slots": 2,
+      "claims_count": 2,
+      "steps_count": 3,
+      "final_verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "slashed_count": 1,
+      "posted_at": 1794651196617
+    },
+    {
+      "id": 4,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce this repo's own README (no key)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "dbcbf1306a3e0fe84bc3fad6df5c2165cc711839",
+      "path": "",
+      "status": "Finalized",
+      "phase": "Finalized",
+      "bounty": "100000000000000000000000",
+      "slots": 2,
+      "claims_count": 2,
+      "steps_count": 3,
+      "final_verdicts": [
+        "Pass",
+        "Pass",
+        "Pass"
+      ],
+      "slashed_count": 0,
+      "posted_at": 1794573067080
+    },
+    {
+      "id": 3,
+      "poster": "poster.pmarket.testnet",
+      "title": "adversarial target",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5cd8635",
+      "path": "fixtures/honest",
+      "status": "Open",
+      "phase": "Expired",
+      "bounty": "50000000000000000000000",
+      "slots": 1,
+      "claims_count": 0,
+      "steps_count": 1,
+      "final_verdicts": null,
+      "slashed_count": 0,
+      "posted_at": 1794529821641
+    },
+    {
+      "id": 2,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the adder README (a worker lies)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "path": "fixtures/honest",
+      "status": "Finalized",
+      "phase": "Finalized",
+      "bounty": "100000000000000000000000",
+      "slots": 2,
+      "claims_count": 2,
+      "steps_count": 2,
+      "final_verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "slashed_count": 1,
+      "posted_at": 1794529752581
+    },
+    {
+      "id": 1,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the adder README (a broken step)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "path": "fixtures/broken",
+      "status": "Finalized",
+      "phase": "Finalized",
+      "bounty": "100000000000000000000000",
+      "slots": 2,
+      "claims_count": 2,
+      "steps_count": 2,
+      "final_verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "slashed_count": 0,
+      "posted_at": 1794529713075
+    },
+    {
+      "id": 0,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the adder README (honest)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "path": "fixtures/honest",
+      "status": "Finalized",
+      "phase": "Finalized",
+      "bounty": "100000000000000000000000",
+      "slots": 2,
+      "claims_count": 2,
+      "steps_count": 2,
+      "final_verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "slashed_count": 0,
+      "posted_at": 1794529676654
+    }
+  ],
+  "fullJobs": [
+    {
+      "id": 6,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the tinydur README (the verifier sides with it)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+      "path": "fixtures/misleading",
+      "steps": [
+        {
+          "do": "node cli.mjs 1h30m",
+          "see": "the output is 5400"
+        },
+        {
+          "do": "node cli.mjs 2d",
+          "see": "the output is 172800"
+        },
+        {
+          "do": "node --test",
+          "see": "the test summary shows # pass 5 and # fail 0"
+        }
+      ],
+      "slots": 2,
+      "bond": "20000000000000000000000",
+      "bounty": "100000000000000000000000",
+      "claim_ms": 40000,
+      "run_ms": 180000,
+      "reveal_ms": 90000,
+      "window_ms": 90000,
+      "posted_at": 1794651249426,
+      "claim_until": 1794651289426,
+      "commit_until": 1794651469426,
+      "reveal_until": 1794651559426,
+      "status": "Finalized",
+      "phase": "Finalized",
+      "reveal_open": false,
+      "advance_due": false,
+      "finalize_ready": false,
+      "claims": [
+        {
+          "worker": "w2.pmarket.testnet",
+          "claimed_at": 1794651251848,
+          "committed": true,
+          "hash": "1ea433178dae83f0b2d034a6d5d9a71aa957748b8a465e3e332ef57344fc18b7",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "transcript_hash": "8404ca91836a0a31f0ba339be874e38ea4ee2fe36144aa42450428457095c1f6",
+          "transcript_uri": "transcript:8404ca91836a0a31f0ba339be874e38ea4ee2fe36144aa42450428457095c1f6",
+          "revealed_at": 1794651269951,
+          "status": "paid",
+          "earned": "90000000000000000000000"
+        },
+        {
+          "worker": "w3.pmarket.testnet",
+          "claimed_at": 1794651251848,
+          "committed": true,
+          "hash": "635f4092c27f03903a5bae0aab93fd918294596e2594766240112e1d936e4182",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "b7f983e43e3a17136cc819c6be740bf51a15efe5de3f97169b10d5e3e281ba91",
+          "transcript_uri": "transcript:b7f983e43e3a17136cc819c6be740bf51a15efe5de3f97169b10d5e3e281ba91",
+          "revealed_at": 1794651272421,
+          "status": "slashed",
+          "earned": "0"
+        }
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "reason": "disagreement",
+          "verifier": "v3.pmarket.testnet",
+          "attempt": 0,
+          "drawn_at": 1794651272421,
+          "deadline": 1794651542421,
+          "ruling": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "8c2a5aaa48f6e9504e64f9ecf82e58b72943aaa73f5c0974849f4ab70a6e00b4",
+          "transcript_uri": "transcript:8c2a5aaa48f6e9504e64f9ecf82e58b72943aaa73f5c0974849f4ab70a6e00b4",
+          "ruled_at": 1794651293032,
+          "challenger": null,
+          "outcome": "ruled",
+          "replaced": []
+        },
+        {
+          "round": 2,
+          "reason": "challenge",
+          "verifier": "v1.pmarket.testnet",
+          "attempt": 0,
+          "drawn_at": 1794651295450,
+          "deadline": 1794651565450,
+          "ruling": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "transcript_hash": "b9d22c129d0ce1ed7e5c290c00d9e7066d69783b57369b40c3616655229caefe",
+          "transcript_uri": "transcript:b9d22c129d0ce1ed7e5c290c00d9e7066d69783b57369b40c3616655229caefe",
+          "ruled_at": 1794651309963,
+          "challenger": "w2.pmarket.testnet",
+          "outcome": "ruled",
+          "replaced": []
+        }
+      ],
+      "challenge_until": 1794651309963,
+      "reported_at": 1794651272421,
+      "final_verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "finalized_at": 1794651312491,
+      "payouts": [
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v1.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "challenge_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "90000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "burns": [
+        {
+          "account": "w3.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "slash"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "overruled"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the tinydur README (a false approval)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+      "path": "fixtures/misleading",
+      "steps": [
+        {
+          "do": "node cli.mjs 1h30m",
+          "see": "the output is 5400"
+        },
+        {
+          "do": "node cli.mjs 2d",
+          "see": "the output is 172800"
+        },
+        {
+          "do": "node --test",
+          "see": "the test summary shows # pass 5 and # fail 0"
+        }
+      ],
+      "slots": 2,
+      "bond": "20000000000000000000000",
+      "bounty": "100000000000000000000000",
+      "claim_ms": 40000,
+      "run_ms": 180000,
+      "reveal_ms": 90000,
+      "window_ms": 12000,
+      "posted_at": 1794651196617,
+      "claim_until": 1794651236617,
+      "commit_until": 1794651416617,
+      "reveal_until": 1794651506617,
+      "status": "Finalized",
+      "phase": "Finalized",
+      "reveal_open": false,
+      "advance_due": false,
+      "finalize_ready": false,
+      "claims": [
+        {
+          "worker": "w1.pmarket.testnet",
+          "claimed_at": 1794651198561,
+          "committed": true,
+          "hash": "5fe95327756ac41ebbc24c99b7770507b93ce9fcfe57b1ef14c6fdb77c1a53f1",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "transcript_hash": "e23a973a309e6d2d55964ae9c9d25dc7eca1a30c82a589fb427db1b983c73ed2",
+          "transcript_uri": "transcript:e23a973a309e6d2d55964ae9c9d25dc7eca1a30c82a589fb427db1b983c73ed2",
+          "revealed_at": 1794651214218,
+          "status": "paid",
+          "earned": "90000000000000000000000"
+        },
+        {
+          "worker": "w3.pmarket.testnet",
+          "claimed_at": 1794651198561,
+          "committed": true,
+          "hash": "f3324c0a9e6be2e2c31c9fff762f6eb2a4aa28ed9bd549fa58be3cb738888fd6",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "a3f9d1cb26223b60da1cd48df646c9bebf2c58db7e232cf1d6ef624ebf07f597",
+          "transcript_uri": "transcript:a3f9d1cb26223b60da1cd48df646c9bebf2c58db7e232cf1d6ef624ebf07f597",
+          "revealed_at": 1794651216543,
+          "status": "slashed",
+          "earned": "0"
+        }
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "reason": "disagreement",
+          "verifier": "v3.pmarket.testnet",
+          "attempt": 0,
+          "drawn_at": 1794651216543,
+          "deadline": 1794651486543,
+          "ruling": [
+            "Pass",
+            "Fail",
+            "Pass"
+          ],
+          "transcript_hash": "1e8a2f8286e8947d6d3cf935f01c14962711a14bf5b39fa7dc04435683d304a7",
+          "transcript_uri": "transcript:1e8a2f8286e8947d6d3cf935f01c14962711a14bf5b39fa7dc04435683d304a7",
+          "ruled_at": 1794651229944,
+          "challenger": null,
+          "outcome": "ruled",
+          "replaced": []
+        }
+      ],
+      "challenge_until": 1794651241944,
+      "reported_at": 1794651216543,
+      "final_verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "finalized_at": 1794651245176,
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "90000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "burns": [
+        {
+          "account": "w3.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "slash"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce this repo's own README (no key)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "dbcbf1306a3e0fe84bc3fad6df5c2165cc711839",
+      "path": "",
+      "steps": [
+        {
+          "do": "npm install",
+          "see": "npm finishes without an error and reports the packages it added"
+        },
+        {
+          "do": "node scripts/sim.mjs",
+          "see": "the honest worker net is positive, the dishonest worker net is negative, and every lie is caught and slashed"
+        },
+        {
+          "do": "npm test",
+          "see": "the test summary shows # pass 12 and # fail 0"
+        }
+      ],
+      "slots": 2,
+      "bond": "20000000000000000000000",
+      "bounty": "100000000000000000000000",
+      "claim_ms": 40000,
+      "run_ms": 600000,
+      "reveal_ms": 180000,
+      "window_ms": 60000,
+      "posted_at": 1794573067080,
+      "claim_until": 1794573107080,
+      "commit_until": 1794573707080,
+      "reveal_until": 1794573887080,
+      "status": "Finalized",
+      "phase": "Finalized",
+      "reveal_open": false,
+      "advance_due": false,
+      "finalize_ready": false,
+      "claims": [
+        {
+          "worker": "w1.pmarket.testnet",
+          "claimed_at": 1794573069479,
+          "committed": true,
+          "hash": "ed8e29476d7afbc842ab2dcf331209119d2b00ae167609ebd9ca3c0c022fff7a",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "3be520ad6f585d16b7a309686a81c2d951f98d11fbf18874fbdb194d549a930d",
+          "transcript_uri": "transcript:3be520ad6f585d16b7a309686a81c2d951f98d11fbf18874fbdb194d549a930d",
+          "revealed_at": 1794573091564,
+          "status": "paid",
+          "earned": "45000000000000000000000"
+        },
+        {
+          "worker": "w2.pmarket.testnet",
+          "claimed_at": 1794573069479,
+          "committed": true,
+          "hash": "9cc505faa4fe5d0a1b52bc0788015f9c76d50dd47ad6dbf59c0e2bd8e4d29186",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "c843c78d669331ca5baf0b8e07f155e86b6e5ad9507c7660023d224303328d75",
+          "transcript_uri": "transcript:c843c78d669331ca5baf0b8e07f155e86b6e5ad9507c7660023d224303328d75",
+          "revealed_at": 1794573093931,
+          "status": "paid",
+          "earned": "45000000000000000000000"
+        }
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "reason": "challenge",
+          "verifier": "v3.pmarket.testnet",
+          "attempt": 0,
+          "drawn_at": 1794573096873,
+          "deadline": 1794573876873,
+          "ruling": [
+            "Pass",
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "21f01e189ea6a3592420e7bff80ba00381c629d0f060b15b8c04e8ae556be9e9",
+          "transcript_uri": "transcript:21f01e189ea6a3592420e7bff80ba00381c629d0f060b15b8c04e8ae556be9e9",
+          "ruled_at": 1794573117946,
+          "challenger": "poster.pmarket.testnet",
+          "outcome": "ruled",
+          "replaced": []
+        }
+      ],
+      "challenge_until": 1794573177946,
+      "reported_at": 1794573093931,
+      "final_verdicts": [
+        "Pass",
+        "Pass",
+        "Pass"
+      ],
+      "finalized_at": 1794573181092,
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "v3.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "challenge_award"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "45000000000000000000000",
+          "kind": "bounty"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "45000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "burns": []
+    },
+    {
+      "id": 3,
+      "poster": "poster.pmarket.testnet",
+      "title": "adversarial target",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5cd8635",
+      "path": "fixtures/honest",
+      "steps": [
+        {
+          "do": "node add.mjs 2 3",
+          "see": "the output is 5"
+        }
+      ],
+      "slots": 1,
+      "bond": "20000000000000000000000",
+      "bounty": "50000000000000000000000",
+      "claim_ms": 6000,
+      "run_ms": 60000,
+      "reveal_ms": 60000,
+      "window_ms": 6000,
+      "posted_at": 1794529821641,
+      "claim_until": 1794529827641,
+      "commit_until": 1794529887641,
+      "reveal_until": 1794529947641,
+      "status": "Open",
+      "phase": "Expired",
+      "reveal_open": false,
+      "advance_due": true,
+      "finalize_ready": false,
+      "claims": [],
+      "rounds": [],
+      "challenge_until": null,
+      "reported_at": null,
+      "final_verdicts": null,
+      "finalized_at": null,
+      "payouts": [],
+      "burns": []
+    },
+    {
+      "id": 2,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the adder README (a worker lies)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "path": "fixtures/honest",
+      "steps": [
+        {
+          "do": "node add.mjs 2 3",
+          "see": "the output is 5"
+        },
+        {
+          "do": "node add.mjs 10 32",
+          "see": "the output is 42"
+        }
+      ],
+      "slots": 2,
+      "bond": "20000000000000000000000",
+      "bounty": "100000000000000000000000",
+      "claim_ms": 40000,
+      "run_ms": 180000,
+      "reveal_ms": 90000,
+      "window_ms": 12000,
+      "posted_at": 1794529752581,
+      "claim_until": 1794529792581,
+      "commit_until": 1794529972581,
+      "reveal_until": 1794530062581,
+      "status": "Finalized",
+      "phase": "Finalized",
+      "reveal_open": false,
+      "advance_due": false,
+      "finalize_ready": false,
+      "claims": [
+        {
+          "worker": "w3.pmarket.testnet",
+          "claimed_at": 1794529754805,
+          "committed": true,
+          "hash": "17d1c32b9d7eb4f9ebd11e2fb2b08c594643e41cb0343cf5c3397d0ee967541b",
+          "revealed": true,
+          "verdicts": [
+            "Fail",
+            "Fail"
+          ],
+          "transcript_hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "transcript_uri": "transcript:bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "revealed_at": 1794529771165,
+          "status": "slashed",
+          "earned": "0"
+        },
+        {
+          "worker": "w1.pmarket.testnet",
+          "claimed_at": 1794529754805,
+          "committed": true,
+          "hash": "52649b188ae67cfd64bd30cc21880defe7a2cf89c39d9e86686de18b0c3fb970",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "transcript_uri": "transcript:bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "revealed_at": 1794529768968,
+          "status": "paid",
+          "earned": "90000000000000000000000"
+        }
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "reason": "disagreement",
+          "verifier": "v1.pmarket.testnet",
+          "attempt": 0,
+          "drawn_at": 1794529771165,
+          "deadline": 1794530041165,
+          "ruling": [
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "transcript_uri": "transcript:bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "ruled_at": 1794529781986,
+          "challenger": null,
+          "outcome": "ruled",
+          "replaced": []
+        }
+      ],
+      "challenge_until": 1794529793986,
+      "reported_at": 1794529771165,
+      "final_verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "finalized_at": 1794529797237,
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "v1.pmarket.testnet",
+          "amount": "10000000000000000000000",
+          "kind": "fee"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "90000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "burns": [
+        {
+          "account": "w3.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "slash"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the adder README (a broken step)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "path": "fixtures/broken",
+      "steps": [
+        {
+          "do": "node add.mjs 2 3",
+          "see": "the output is 5"
+        },
+        {
+          "do": "node add.mjs 10 32",
+          "see": "the output is 42"
+        }
+      ],
+      "slots": 2,
+      "bond": "20000000000000000000000",
+      "bounty": "100000000000000000000000",
+      "claim_ms": 40000,
+      "run_ms": 180000,
+      "reveal_ms": 90000,
+      "window_ms": 12000,
+      "posted_at": 1794529713075,
+      "claim_until": 1794529753075,
+      "commit_until": 1794529933075,
+      "reveal_until": 1794530023075,
+      "status": "Finalized",
+      "phase": "Finalized",
+      "reveal_open": false,
+      "advance_due": false,
+      "finalize_ready": false,
+      "claims": [
+        {
+          "worker": "w1.pmarket.testnet",
+          "claimed_at": 1794529715400,
+          "committed": true,
+          "hash": "fca1b5cd87d5470b7b257d6fc615e3296c477e0b0642d1bc6fcd531cc595b9cc",
+          "revealed": true,
+          "verdicts": [
+            "Fail",
+            "Fail"
+          ],
+          "transcript_hash": "27d07364fef290910898645e343f048a674eff7baa100c42e9ad8ae2cf10f7b7",
+          "transcript_uri": "transcript:27d07364fef290910898645e343f048a674eff7baa100c42e9ad8ae2cf10f7b7",
+          "revealed_at": 1794529733215,
+          "status": "paid",
+          "earned": "50000000000000000000000"
+        },
+        {
+          "worker": "w2.pmarket.testnet",
+          "claimed_at": 1794529715400,
+          "committed": true,
+          "hash": "a66cf9e0df9543508ed85ef0559bb862297cf2ddd8e6c0503b06aa38f17f109f",
+          "revealed": true,
+          "verdicts": [
+            "Fail",
+            "Fail"
+          ],
+          "transcript_hash": "27d07364fef290910898645e343f048a674eff7baa100c42e9ad8ae2cf10f7b7",
+          "transcript_uri": "transcript:27d07364fef290910898645e343f048a674eff7baa100c42e9ad8ae2cf10f7b7",
+          "revealed_at": 1794529735587,
+          "status": "paid",
+          "earned": "50000000000000000000000"
+        }
+      ],
+      "rounds": [],
+      "challenge_until": 1794529747587,
+      "reported_at": 1794529735587,
+      "final_verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "finalized_at": 1794529750373,
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "burns": []
+    },
+    {
+      "id": 0,
+      "poster": "poster.pmarket.testnet",
+      "title": "Reproduce the adder README (honest)",
+      "repo": "https://github.com/spragginsdesigns/proof-market",
+      "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+      "path": "fixtures/honest",
+      "steps": [
+        {
+          "do": "node add.mjs 2 3",
+          "see": "the output is 5"
+        },
+        {
+          "do": "node add.mjs 10 32",
+          "see": "the output is 42"
+        }
+      ],
+      "slots": 2,
+      "bond": "20000000000000000000000",
+      "bounty": "100000000000000000000000",
+      "claim_ms": 40000,
+      "run_ms": 180000,
+      "reveal_ms": 90000,
+      "window_ms": 12000,
+      "posted_at": 1794529676654,
+      "claim_until": 1794529716654,
+      "commit_until": 1794529896654,
+      "reveal_until": 1794529986654,
+      "status": "Finalized",
+      "phase": "Finalized",
+      "reveal_open": false,
+      "advance_due": false,
+      "finalize_ready": false,
+      "claims": [
+        {
+          "worker": "w1.pmarket.testnet",
+          "claimed_at": 1794529679005,
+          "committed": true,
+          "hash": "d4e8de1bce3ee13edea613db65f9e419e0baa2f605ce8fa001895e88cbf47e52",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "transcript_uri": "transcript:bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "revealed_at": 1794529693336,
+          "status": "paid",
+          "earned": "50000000000000000000000"
+        },
+        {
+          "worker": "w2.pmarket.testnet",
+          "claimed_at": 1794529679005,
+          "committed": true,
+          "hash": "0cfec61ff9349b10521d4db67b077f90dc38c80ea9eb95ce14984cf0ce080f64",
+          "revealed": true,
+          "verdicts": [
+            "Pass",
+            "Pass"
+          ],
+          "transcript_hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "transcript_uri": "transcript:bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+          "revealed_at": 1794529695635,
+          "status": "paid",
+          "earned": "50000000000000000000000"
+        }
+      ],
+      "rounds": [],
+      "challenge_until": 1794529707635,
+      "reported_at": 1794529695635,
+      "final_verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "finalized_at": 1794529710683,
+      "payouts": [
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "20000000000000000000000",
+          "kind": "bond_return"
+        },
+        {
+          "account": "w1.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        },
+        {
+          "account": "w2.pmarket.testnet",
+          "amount": "50000000000000000000000",
+          "kind": "bounty"
+        }
+      ],
+      "burns": []
+    }
+  ]
+}

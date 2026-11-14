@@ -1,0 +1,126 @@
+{
+  "job": {
+    "repo": "https://github.com/spragginsdesigns/proof-market",
+    "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+    "path": "fixtures/misleading"
+  },
+  "cloned_from": "http://pm-origin-shared-zgh3e7:8080/repo.git",
+  "started_at": "2026-11-14T10:13:42.350Z",
+  "steps": [
+    {
+      "index": 0,
+      "do": "node cli.mjs 1h30m",
+      "see": "the output is 5400",
+      "commands": [
+        {
+          "argv": [
+            "node",
+            "cli.mjs",
+            "1h30m"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 208,
+          "stdout": "5400\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "do": "node cli.mjs 2d",
+      "see": "the output is 172800",
+      "commands": [
+        {
+          "argv": [
+            "node",
+            "cli.mjs",
+            "2d"
+          ],
+          "exit_code": 1,
+          "timed_out": false,
+          "duration_ms": 182,
+          "stdout": "",
+          "stderr": "tinydur: unknown unit \"d\"\n"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "do": "node --test",
+      "see": "the test summary shows # pass 5 and # fail 0",
+      "commands": [
+        {
+          "argv": [
+            "node",
+            "--test"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 350,
+          "stdout": "TAP version 13\n# Subtest: seconds\nok 1 - seconds\n  ---\n  duration_ms: 2.046625\n  type: 'test'\n  ...\n# Subtest: minutes\nok 2 - minutes\n  ---\n  duration_ms: 0.390068\n  type: 'test'\n  ...\n# Subtest: hours\nok 3 - hours\n  ---\n  duration_ms: 0.35033\n  type: 'test'\n  ...\n# Subtest: combined\nok 4 - combined\n  ---\n  duration_ms: 0.32056\n  type: 'test'\n  ...\n# Subtest: rejects text that is not a duration\nok 5 - rejects text that is not a duration\n  ---\n  duration_ms: 0.608749\n  type: 'test'\n  ...\n1..5\n# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 146.113866\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "clone": {
+    "argv": [
+      "bash",
+      "-c",
+      "set -e; git clone --filter=blob:none \"http://pm-origin-shared-zgh3e7:8080/repo.git\" /work/repo && cd /work/repo && git checkout --detach \"9246d0511e29f1d20b03fbd0ec28a6820bc6a84c\""
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_ms": 595,
+    "stdout": "",
+    "stderr": "Cloning into '/work/repo'...\nHEAD is now at 9246d05 feat(e2e): --dispute posts two jobs on a project whose README has one false step\n"
+  },
+  "finished_at": "2026-11-14T10:13:45.800Z",
+  "duration_ms": 3450,
+  "hash": "1e8a2f8286e8947d6d3cf935f01c14962711a14bf5b39fa7dc04435683d304a7",
+  "plan": {
+    "steps": [
+      {
+        "setup": [],
+        "run": [
+          [
+            "node",
+            "cli.mjs",
+            "1h30m"
+          ]
+        ]
+      },
+      {
+        "setup": [],
+        "run": [
+          [
+            "node",
+            "cli.mjs",
+            "2d"
+          ]
+        ]
+      },
+      {
+        "setup": [],
+        "run": [
+          [
+            "node",
+            "--test"
+          ]
+        ]
+      }
+    ]
+  },
+  "verdicts": [
+    "Pass",
+    "Fail",
+    "Pass"
+  ],
+  "reasons": [
+    "Command produced stdout '5400\\n' and exited 0, matching expected output 5400.",
+    "Command failed with exit code 1 and stderr 'unknown unit \"d\"'; did not output 172800.",
+    "Test runner output includes '# pass 5' and '# fail 0' as expected; exit code 0."
+  ],
+  "model": "gpt-5-mini"
+}

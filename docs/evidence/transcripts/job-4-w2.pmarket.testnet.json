@@ -1,0 +1,122 @@
+{
+  "job": {
+    "repo": "https://github.com/spragginsdesigns/proof-market",
+    "commit": "dbcbf1306a3e0fe84bc3fad6df5c2165cc711839",
+    "path": ""
+  },
+  "cloned_from": "http://pm-origin-shared-8o72co:8080/repo.git",
+  "started_at": "2026-11-13T12:31:16.283Z",
+  "steps": [
+    {
+      "index": 0,
+      "do": "npm install",
+      "see": "npm finishes without an error and reports the packages it added",
+      "commands": [
+        {
+          "argv": [
+            "npm",
+            "install"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 4830,
+          "stdout": "\nadded 121 packages, and audited 122 packages in 5s\n\n41 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n",
+          "stderr": "npm notice\nnpm notice New major version of npm available! 10.9.9 -> 12.2.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2\nnpm notice To update run: npm install -g npm@12.2.2\nnpm notice\n"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "do": "node scripts/sim.mjs",
+      "see": "the honest worker net is positive, the dishonest worker net is negative, and every lie is caught and slashed",
+      "commands": [
+        {
+          "argv": [
+            "node",
+            "scripts/sim.mjs"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 163,
+          "stdout": "Proof Market simulation: 2000 jobs, lie probability 0.5\n\n  honest worker net:   1903.10 NEAR  (paid for correct reports, bonds always returned)\n  dishonest worker net:-193.80 NEAR  (969 lies, 969 caught and slashed)\n  bonds burned:        193.80 NEAR  (slashed funds, nobody can withdraw them)\n\n  assumes: an honest verifier, every disagreement audited, a liar flips every step; two workers who agree on a lie are not modeled.\n  result: under these assumptions every lie is caught and costs its bond, and honest reports earn the bounty.\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "do": "npm test",
+      "see": "the test summary shows # pass 12 and # fail 0",
+      "commands": [
+        {
+          "argv": [
+            "npm",
+            "test"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 892,
+          "stdout": "\n> proof-market@0.1.0 test\n> node --test sandbox/egress/allowlist.test.mjs agents/*.test.mjs\n\nTAP version 13\n# Subtest: verdict csv encoding\nok 1 - verdict csv encoding\n  ---\n  duration_ms: 1.739466\n  type: 'test'\n  ...\n# Subtest: preimage is the exact documented string\nok 2 - preimage is the exact documented string\n  ---\n  duration_ms: 0.357368\n  type: 'test'\n  ...\n# Subtest: report hash matches a fixed SHA-256 vector\nok 3 - report hash matches a fixed SHA-256 vector\n  ---\n  duration_ms: 4.095069\n  type: 'test'\n  ...\n# Subtest: buildReport carries a fresh 32-hex salt and a valid hash\nok 4 - buildReport carries a fresh 32-hex salt and a valid hash\n  ---\n  duration_ms: 1.151087\n  type: 'test'\n  ...\n# Subtest: contradiction is Pass vs Fail only\nok 5 - contradiction is Pass vs Fail only\n  ---\n  duration_ms: 0.359279\n  type: 'test'\n  ...\n# Subtest: strips a redundant cd into the job path\nok 6 - strips a redundant cd into the job path\n  ---\n  duration_ms: 2.772183\n  type: 'test'\n  ...\n# Subtest: keeps a cd into a deeper or different directory\nok 7 - keeps a cd into a deeper or different directory\n  ---\n  duration_ms: 0.24344\n  type: 'test'\n  ...\n# Subtest: no-op when there is no path\nok 8 - no-op when there is no path\n  ---\n  duration_ms: 0.296759\n  type: 'test'\n  ...\n# Subtest: blocks loopback, private, link-local, CGNAT and reserved addresses\nok 9 - blocks loopback, private, link-local, CGNAT and reserved addresses\n  ---\n  duration_ms: 2.108193\n  type: 'test'\n  ...\n# Subtest: allows ordinary public addresses\nok 10 - allows ordinary public addresses\n  ---\n  duration_ms: 0.308749\n  type: 'test'\n  ...\n# Subtest: allowlist is by hostname only\nok 11 - allowlist is by hostname only\n  ---\n  duration_ms: 8.639017\n  type: 'test'\n  ...\n# {\"t\":\"2026-11-13T12:31:22.690Z\",\"kind\":\"connect\",\"host\":\"example.com\",\"port\":443,\"allowed\":false,\"why\":\"host not on allowlist\",\"from\":\"127.0.0.1\"}\n# {\"t\":\"2026-11-13T12:31:22.894Z\",\"kind\":\"connect\",\"host\":\"example.com\",\"port\":443,\"allowed\":false,\"why\":\"host not on allowlist\",\"from\":\"127.0.0.1\"}\n# Subtest: a client that resets after a refused CONNECT does not stop the proxy\nok 12 - a client that resets after a refused CONNECT does not stop the proxy\n  ---\n  duration_ms: 219.722014\n  type: 'test'\n  ...\n1..12\n# tests 12\n# suites 0\n# pass 12\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 566.607202\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "clone": {
+    "argv": [
+      "bash",
+      "-c",
+      "set -e; git clone --filter=blob:none \"http://pm-origin-shared-8o72co:8080/repo.git\" /work/repo && cd /work/repo && git checkout --detach \"dbcbf1306a3e0fe84bc3fad6df5c2165cc711839\""
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_ms": 246,
+    "stdout": "",
+    "stderr": "Cloning into '/work/repo'...\nHEAD is now at dbcbf13 docs: state the model cost basis, the Responses API endpoint, and the not-a-claimant attack\n"
+  },
+  "finished_at": "2026-11-13T12:31:25.108Z",
+  "duration_ms": 8825,
+  "hash": "c843c78d669331ca5baf0b8e07f155e86b6e5ad9507c7660023d224303328d75",
+  "plan": {
+    "steps": [
+      {
+        "setup": [],
+        "run": [
+          [
+            "npm",
+            "install"
+          ]
+        ]
+      },
+      {
+        "setup": [],
+        "run": [
+          [
+            "node",
+            "scripts/sim.mjs"
+          ]
+        ]
+      },
+      {
+        "setup": [],
+        "run": [
+          [
+            "npm",
+            "test"
+          ]
+        ]
+      }
+    ]
+  },
+  "verdicts": [
+    "Pass",
+    "Pass",
+    "Pass"
+  ],
+  "reasons": [
+    "npm install output shows added packages and no vulnerabilities as described.",
+    "sim.mjs output shows honest net positive, dishonest net negative, and lies slashed as described.",
+    "npm test output ends with # pass 12 and # fail 0 as described."
+  ],
+  "model": "gpt-5-nano"
+}

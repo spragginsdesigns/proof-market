@@ -1,0 +1,101 @@
+{
+  "job": {
+    "repo": "https://github.com/spragginsdesigns/proof-market",
+    "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4",
+    "path": "fixtures/honest"
+  },
+  "cloned_from": "http://pm-origin-shared-y6xtvb:8080/repo.git",
+  "started_at": "2026-11-13T00:28:04.014Z",
+  "steps": [
+    {
+      "index": 0,
+      "do": "node add.mjs 2 3",
+      "see": "the output is 5",
+      "commands": [
+        {
+          "argv": [
+            "node",
+            "add.mjs",
+            "2",
+            "3"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 175,
+          "stdout": "5\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "do": "node add.mjs 10 32",
+      "see": "the output is 42",
+      "commands": [
+        {
+          "argv": [
+            "node",
+            "add.mjs",
+            "10",
+            "32"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 165,
+          "stdout": "42\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "clone": {
+    "argv": [
+      "bash",
+      "-c",
+      "set -e; git clone --filter=blob:none \"http://pm-origin-shared-y6xtvb:8080/repo.git\" /work/repo && cd /work/repo && git checkout --detach \"5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4\""
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_ms": 1451,
+    "stdout": "",
+    "stderr": "Cloning into '/work/repo'...\nHEAD is now at 5a3801a chore: keep host paths and infra names out of the repo and on-chain metadata\n"
+  },
+  "finished_at": "2026-11-13T00:28:08.054Z",
+  "duration_ms": 4040,
+  "hash": "bf2d958a69110853db0e680ec3f1749cf41c3c37063568e4bdb79bcb0029e08d",
+  "plan": {
+    "steps": [
+      {
+        "setup": [],
+        "run": [
+          [
+            "node",
+            "add.mjs",
+            "2",
+            "3"
+          ]
+        ]
+      },
+      {
+        "setup": [],
+        "run": [
+          [
+            "node",
+            "add.mjs",
+            "10",
+            "32"
+          ]
+        ]
+      }
+    ]
+  },
+  "verdicts": [
+    "Pass",
+    "Pass"
+  ],
+  "reasons": [
+    "Observed stdout is 5 (5\\n) which matches the expectation.",
+    "Observed stdout is 42 (42\\n) which matches the expectation."
+  ],
+  "model": "gpt-5-nano"
+}

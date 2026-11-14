@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+contract/target/
+contract/target-build.log
+neardev/
+.env
+.env.*
+*.key.json
+state/
+keys/
+transcripts/*.json
+proof-out/
+*.log
+.DS_Store

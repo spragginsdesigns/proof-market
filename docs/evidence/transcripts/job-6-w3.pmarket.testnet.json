@@ -1,0 +1,174 @@
+{
+  "job": {
+    "repo": "https://github.com/spragginsdesigns/proof-market",
+    "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c",
+    "path": "fixtures/misleading"
+  },
+  "cloned_from": "http://pm-origin-shared-zgh3e7:8080/repo.git",
+  "started_at": "2026-11-14T10:14:17.338Z",
+  "steps": [
+    {
+      "index": 0,
+      "do": "node cli.mjs 1h30m",
+      "see": "the output is 5400",
+      "commands": [
+        {
+          "argv": [
+            "npm",
+            "ci"
+          ],
+          "exit_code": 1,
+          "timed_out": false,
+          "duration_ms": 1258,
+          "stdout": "",
+          "stderr": "npm error code EUSAGE\nnpm error\nnpm error The `npm ci` command can only install with an existing package-lock.json or\nnpm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or\nnpm error later to generate a package-lock.json file, then try again.\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-14T10_14_18_772Z-debug-0.log\n"
+        },
+        {
+          "argv": [
+            "node",
+            "cli.mjs",
+            "1h30m"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 218,
+          "stdout": "5400\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "do": "node cli.mjs 2d",
+      "see": "the output is 172800",
+      "commands": [
+        {
+          "argv": [
+            "npm",
+            "ci"
+          ],
+          "exit_code": 1,
+          "timed_out": false,
+          "duration_ms": 675,
+          "stdout": "",
+          "stderr": "npm error code EUSAGE\nnpm error\nnpm error The `npm ci` command can only install with an existing package-lock.json or\nnpm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or\nnpm error later to generate a package-lock.json file, then try again.\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-14T10_14_20_173Z-debug-0.log\n"
+        },
+        {
+          "argv": [
+            "node",
+            "cli.mjs",
+            "2d"
+          ],
+          "exit_code": 1,
+          "timed_out": false,
+          "duration_ms": 183,
+          "stdout": "",
+          "stderr": "tinydur: unknown unit \"d\"\n"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "do": "node --test",
+      "see": "the test summary shows # pass 5 and # fail 0",
+      "commands": [
+        {
+          "argv": [
+            "npm",
+            "ci"
+          ],
+          "exit_code": 1,
+          "timed_out": false,
+          "duration_ms": 678,
+          "stdout": "",
+          "stderr": "npm error code EUSAGE\nnpm error\nnpm error The `npm ci` command can only install with an existing package-lock.json or\nnpm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or\nnpm error later to generate a package-lock.json file, then try again.\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-11-14T10_14_21_047Z-debug-0.log\n"
+        },
+        {
+          "argv": [
+            "node",
+            "--test"
+          ],
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 334,
+          "stdout": "TAP version 13\n# Subtest: seconds\nok 1 - seconds\n  ---\n  duration_ms: 1.416177\n  type: 'test'\n  ...\n# Subtest: minutes\nok 2 - minutes\n  ---\n  duration_ms: 0.22503\n  type: 'test'\n  ...\n# Subtest: hours\nok 3 - hours\n  ---\n  duration_ms: 0.174569\n  type: 'test'\n  ...\n# Subtest: combined\nok 4 - combined\n  ---\n  duration_ms: 0.236739\n  type: 'test'\n  ...\n# Subtest: rejects text that is not a duration\nok 5 - rejects text that is not a duration\n  ---\n  duration_ms: 0.352849\n  type: 'test'\n  ...\n1..5\n# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 119.461894\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "clone": {
+    "argv": [
+      "bash",
+      "-c",
+      "set -e; git clone --filter=blob:none \"http://pm-origin-shared-zgh3e7:8080/repo.git\" /work/repo && cd /work/repo && git checkout --detach \"9246d0511e29f1d20b03fbd0ec28a6820bc6a84c\""
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_ms": 521,
+    "stdout": "",
+    "stderr": "Cloning into '/work/repo'...\nHEAD is now at 9246d05 feat(e2e): --dispute posts two jobs on a project whose README has one false step\n"
+  },
+  "finished_at": "2026-11-14T10:14:23.323Z",
+  "duration_ms": 5985,
+  "hash": "b7f983e43e3a17136cc819c6be740bf51a15efe5de3f97169b10d5e3e281ba91",
+  "plan": {
+    "steps": [
+      {
+        "setup": [
+          [
+            "npm",
+            "ci"
+          ]
+        ],
+        "run": [
+          [
+            "node",
+            "cli.mjs",
+            "1h30m"
+          ]
+        ]
+      },
+      {
+        "setup": [
+          [
+            "npm",
+            "ci"
+          ]
+        ],
+        "run": [
+          [
+            "node",
+            "cli.mjs",
+            "2d"
+          ]
+        ]
+      },
+      {
+        "setup": [
+          [
+            "npm",
+            "ci"
+          ]
+        ],
+        "run": [
+          [
+            "node",
+            "--test"
+          ]
+        ]
+      }
+    ]
+  },
+  "verdicts": [
+    "Pass",
+    "Fail",
+    "Pass"
+  ],
+  "reasons": [
+    "The final output of node cli.mjs 1h30m is 5400 as seen in stdout.",
+    "node cli.mjs 2d did not output 172800; the run ends with 'unknown unit \"d\"'.",
+    "node --test shows 5 passes and 0 fails, matching the see text."
+  ],
+  "model": "gpt-5-nano"
+}

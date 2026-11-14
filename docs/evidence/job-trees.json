@@ -1,0 +1,7 @@
+[
+  { "job": 0, "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4", "path": "fixtures/honest", "tree": "20576e9ee103b32c51552d83bebc6c9b42f2ae6e" },
+  { "job": 1, "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4", "path": "fixtures/broken", "tree": "5ceab7bae50413d4704a52e5ec1fe8720eca72bd" },
+  { "job": 2, "commit": "5a3801a9e227d4b50ce1a48a8e128fe43f34cdb4", "path": "fixtures/honest", "tree": "20576e9ee103b32c51552d83bebc6c9b42f2ae6e" },
+  { "job": 5, "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c", "path": "fixtures/misleading", "tree": "f19930eec48751bdf6c6690050cbebb1b410813e" },
+  { "job": 6, "commit": "9246d0511e29f1d20b03fbd0ec28a6820bc6a84c", "path": "fixtures/misleading", "tree": "f19930eec48751bdf6c6690050cbebb1b410813e" }
+]
